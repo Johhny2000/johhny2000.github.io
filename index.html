@@ -1,81 +1,146 @@
-﻿<!DOCTYPE html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>213414</title>
-<style>
-table {border: 5px solid powderblue;}
-table {color: purple;}
-th    {color: green;}
-p     {font-family: verdana;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --background-color: #ffffff;
+            --text-color: #000000;
+            --link-color: #1a73e8;
+        }
+
+        [data-theme='dark'] {
+            --background-color: #121212;
+            --text-color: #c7c7c7;
+            --link-color: #825daf;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            text-align: justify;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--link-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            margin: 1rem 0;
+        }
+
+        nav a {
+            color: var(--text-color);
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--link-color);
+            padding-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: var(--link-color);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <header>
+        <h1>MK - Overview</h1>
+        <nav>
+            <a href="#qualifications">Qualifications</a>
+            <a href="#skills">Skills</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<h1>Tere!</h1>
+    <main>
+        <section id="qualifications">
+            <h2>Qualifications</h2>
+            <p>I hold strong technical expertise in system administration and maintenance for both Windows and Linux environments. My background includes managing microcontrollers, single-board computers, and virtual machines, as well as foundational knowledge in cybersecurity, computer networks, and electronics. I have extensive experience programming in Python for over five years, with additional proficiency in C, C++, and MATLAB, and basic familiarity with web technologies like JavaScript, HTML, and CSS. I have working knowledge of Finnish, Russian, and Latin.</p>
+            <ul>
+                <li>BSc from TalTech</li>
+                <li>B- and C-category driving licences</li>
+                <li>C1 level in Estonian and English</li>
+            </ul>
+        </section>
 
-<p>213414 esimene veebileht.</p>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>I specialize in automating tasks (mainly Python, sometimes Bash), developing simple Google Chrome extensions, and creating both technical and user documentation. My skill set includes maintaining and troubleshooting hardware, setting up simulations, and configuring complex IT environments for Windows NT and UNIX-based operating systems. I have hands-on experience with building and managing simulations, writing scripts for process optimization, and ensuring secure and reliable system operations.</p>
+            <ul>
+                <li>Windows NT: Windows 10, 11</li>
+                <li>UNIX-based: OpenBSD, FreeBSD, Debian, Ubuntu, openSUSE.</li>
+            </ul>
+            <p>For daily development I use the following languages:</p>
+            <ul>
+                <li>Python</li>
+                <li>HTML, CSS, JavaScript.</li>
+            </ul>
+            <p>In addition to my preffered languages, I also have experience in the following languages:</p>
+            <ul>
+                <li>Bash</li>
+                <li>C, C++</li>
+                <li>Fortran</li>
+                <li>PHP</li>
+                <li>Visual Basic</li>
+            </ul>
+        </section>
 
-<p>Mõned lingid:
-<ul>
- <li><a href="https://w3schools.com">W3schools</a><br></li>
- <li><a href="https://taltech.ee/">TTU link</a></li>
-</ul>
-</p>
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>Outside of my professional interests, I enjoy developing small apps and tools to solve or automate everyday problems. I have a passion for learning about new technologies and consuming content related to cybersecurity. In my free time, I like reading, playing rhythm games like Osu! and Retro/Grade, and tinkering with woodworking related projects.</p>
+        </section>
+    </main>
 
-<img src="https://i.err.ee/smartcrop?type=optimize&width=672&aspectratio=16%3A10&url=https%3A%2F%2Fs.err.ee%2Fphoto%2Fcrop%2F2020%2F10%2F13%2F827887h169b.jpg" height=200 width=300 alt="Väike kutsu">
-<br>
+    <footer id="contact">
+        <p>Contact me at: <a href="mailto:martin.kaselo1@gmail.com">martin.kaselo1@gmail.com</a></p>
+        <button onclick="toggleTheme()">Toggle Dark Mode</button>
+    </footer>
 
-<p style="color:red">Natuke punast teksti.</p>
-<br>
-<table style="width:100%">
-  <tr>
-    <th>Numbrid</th>
-    <th>Tähed</th>
-    <th>Sümbolid</th>
-  </tr>
-  <tr>
-    <td>123</td>
-    <td>ABC</td>
-    <td>@?)</td>
-  </tr>
-  <tr>
-   <td>456</td>
-   <td>DEF</td>
-   <td>%/</td>
-  </tr>
-</table>
-
-<p title="( ͡° ͜ʖ ͡°)">
-Hoia hiirt veidi siin ka :).
-</p>
-
-<p>Mingi teine paragraf, mille sees on erineva suurusega pealkirjad.
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-</p>
-
-<button>See nupp siin ei tee midagi</button>
-
-<p>Jutt algab... <br> ja läheb siit edasi.</p>
-
-<ul>
-  <li>Kohv</li>
-  <li>Tee</li>
-  <li>Piim</li>
-  <li>Vesi</li>
-</ul>
-
-<ol>
-  <li>Kohv</li>
-  <li>Tee</li>
-  <li>Piim</li>
-  <li>Vesi</li>
-</ol>
-
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? '' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+        }
+    </script>
 </body>
-</html>
 
+</html>
