@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MK</title>
+    <title>MK's Overview</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         :root {
             --background-color: #ffffff;
             --text-color: #000000;
             --link-color: #1a73e8;
+        }
+        html {
+            scroll-behavior: smooth;
         }
 
         [data-theme='dark'] {
@@ -29,25 +32,29 @@
             line-height: 1.6;
         }
 
-        header {
+        header, nav {
             background: var(--link-color);
             color: white;
-            padding: 1rem;
+            padding: 0.1rem;
             text-align: center;
         }
 
         nav {
-            margin: 1rem 0;
+            top: 0;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            padding: 5px 0 5px 0;
         }
 
         nav a {
             color: var(--text-color);
-            margin: 0 10px;
+            padding: 0 10px 0 10px;
             text-decoration: none;
         }
 
         main {
-            padding: 1rem;
+            padding: 2rem;
         }
 
         section {
@@ -76,19 +83,29 @@
                 margin: 0.5rem 0;
             }
         }
+
+        button {
+            background-color: #121212;
+            color: #c7c7c7;
+            border-radius: 8px;
+            cursor: pointer;
+            float: right;
+        }
+
     </style>
 </head>
 
 <body>
     <header>
         <h1>MK - Overview</h1>
-        <nav>
-            <a href="#qualifications">Qualifications</a>
-            <a href="#skills">Skills</a>
-            <a href="#hobbies">Hobbies</a>
-            <a href="#contact">Contact</a>
-        </nav>
     </header>
+    <nav>
+        <button onclick="toggleTheme()">Toggle Dark Mode</button>
+        <a href="#qualifications">Qualifications</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
     <main>
         <section id="qualifications">
@@ -97,7 +114,7 @@
             <ul>
                 <li>BSc from TalTech</li>
                 <li>B- and C-category driving licences</li>
-                <li>C1 level in Estonian and English</li>
+                <li>C1 level in Estonian and English.</li>
             </ul>
         </section>
 
@@ -119,7 +136,7 @@
                 <li>C, C++</li>
                 <li>Fortran</li>
                 <li>PHP</li>
-                <li>Visual Basic</li>
+                <li>Visual Basic.</li>
             </ul>
         </section>
 
@@ -130,8 +147,8 @@
     </main>
 
     <footer id="contact">
-        <p>Contact me at: <a href="mailto:martin.kaselo1@gmail.com">martin.kaselo1@gmail.com</a></p>
-        <button onclick="toggleTheme()">Toggle Dark Mode</button>
+        <p>Contact me</p>
+        
     </footer>
 
     <script>
