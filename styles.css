@@ -1,0 +1,138 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4vw;
+}
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #1a73e8;
+}
+
+[data-theme='dark'] {
+    --background-color: #121212;
+    --text-color: #c7c7c7;
+    --link-color: #825daf;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h2 {
+    border-bottom: 2px solid var(--link-color);
+    padding-bottom: 0.5rem;
+}
+
+header, nav {
+    background: var(--link-color);
+    color: white;
+    padding: 0.1vw;
+    text-align: center;
+    font-size: 3vw;
+}
+
+nav {
+    top: 0;
+    position: sticky;
+    overflow: hidden;
+    padding: 0.5vw 0 0.5vw 0;
+    line-height: 5vh;
+}
+
+nav a {
+    color: var(--text-color);
+    padding: 0 10px 0 10px;
+    text-decoration: none;
+    display: inline;
+}
+
+main {
+    padding: 0 12vw 0 12vw;
+}
+
+section {
+    font-size: 3vw;
+    margin-bottom: 2rem;
+}
+
+p, ul {
+    font-size: 1.8vw;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--link-color);
+    color: white;
+}
+
+/*Dark mode button
+------------------*/
+.theme-checkbox {
+    --color-start: #ffffff;
+    --color-end: #121212;
+    --time-transmission: 0.5s;
+    --size-checkbox-circle: 15px;
+    --size-checkbox-leeway: 5px;
+    /*Position*/
+    position: absolute;
+    right: 30px;
+    /*Remove regular checkbox*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /*Checkbox size*/
+    width: calc(var(--size-checkbox-circle)*2 + var(--size-checkbox-leeway));
+    height: calc(var(--size-checkbox-circle) + var(--size-checkbox-leeway));
+    /*Checkbox movement*/
+    background: linear-gradient(to right, var(--color-start) 50%, var(--color-end) 50%) no-repeat;
+    background-size: 200%;
+    background-position: 0;
+    /*Make checkbox round*/
+    border-radius: 20px;
+    /*Animation timing*/
+    transition: var(--time-transmission);
+    cursor: pointer;
+}
+
+.theme-checkbox::before {
+    /*Add an object*/
+    content: "";
+    /*Make it square*/
+    width: var(--size-checkbox-circle);
+    height: var(--size-checkbox-circle);
+    /*Give starting position*/
+    position: absolute;
+    top: calc(var(--size-checkbox-leeway)/2);
+    left: calc(var(--size-checkbox-leeway)/2);
+    /*Specify movement*/
+    background: linear-gradient(to right, var(--color-start) 50%, var(--color-end) 50%) no-repeat;
+    /*Show whole circle*/
+    background-size: 200%;
+    /*Make inner circle whole*/
+    background-position: 100%;
+    border-radius:50%;
+    /*Animation timing*/
+    transition: var(--time-transmission);
+}
+
+.theme-checkbox:checked::before {
+    /*Calculate inner circle position */
+    left: calc(100% - var(--size-checkbox-circle) - (var(--size-checkbox-leeway)/2));
+    background-position: 0;
+}
+
+.theme-checkbox:checked {
+    /*Affect whole slider*/
+    background-position: 100%;
+}
+
+/*Language button
+-----------------*/
