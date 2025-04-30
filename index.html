@@ -32,18 +32,22 @@
             line-height: 1.6;
         }
 
+        p, ul {
+            font-size: 2.8vw;
+        }
+
         header, nav {
             background: var(--link-color);
             color: white;
-            padding: 0.1rem;
+            padding: 0.1vw;
             text-align: center;
+            font-size: 3vw;
         }
 
         nav {
             top: 0;
-            overflow: hidden;
             position: sticky;
-            top: 0;
+            overflow: hidden;
             padding: 5px 0 5px 0;
         }
 
@@ -58,6 +62,7 @@
         }
 
         section {
+            font-size: 3vw;
             margin-bottom: 2rem;
         }
 
@@ -79,7 +84,7 @@
             }
 
             nav a {
-                display: block;
+                display: inline;
                 margin: 0.5rem 0;
             }
         }
@@ -90,8 +95,66 @@
             border-radius: 8px;
             cursor: pointer;
             float: right;
+            margin-right: 15px;
+            font-size: 2vw;
         }
 
+        .theme-checkbox {
+            --color-start: #ffffff;
+            --color-end: #121212;
+            --time-transmission: 0.5s;
+            --size-checkbox-circle: 15px;
+            --size-checkbox-leeway: 5px;
+            /*Remove regular checkbox*/
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            /*Checkbox size*/
+            width: calc(var(--size-checkbox-circle)*2 + var(--size-checkbox-leeway));
+            height: calc(var(--size-checkbox-circle) + var(--size-checkbox-leeway));
+            /*Checkbox movement*/
+            background: linear-gradient(to right, var(--color-start) 50%, var(--color-end) 50%) no-repeat;
+            background-size: 200%;
+            background-position: 0;
+            /*Make checkbox round*/
+            border-radius: 20px;
+            /*Animation timing*/
+            transition: var(--time-transmission);
+            position: relative;
+            left: 10px;
+            cursor: pointer;
+        }
+
+        .theme-checkbox::before {
+            /*Add an object*/
+            content: "";
+            /*Make it square*/
+            width: var(--size-checkbox-circle);
+            height: var(--size-checkbox-circle);
+            /*Give starting position*/
+            position: absolute;
+            top: calc(var(--size-checkbox-leeway)/2);
+            left: calc(var(--size-checkbox-leeway)/2);
+            /*Specify movement*/
+            background: linear-gradient(to right, var(--color-start) 50%, var(--color-end) 50%) no-repeat;
+            /*Show whole circle*/
+            background-size: 200%;
+            /*Make inner circle whole*/
+            background-position: 100%;
+            border-radius:50%;
+            /*Animation timing*/
+            transition: var(--time-transmission);
+        }
+
+        .theme-checkbox:checked::before {
+            /*Calculate inner circle position */
+            left: calc(100% - var(--size-checkbox-circle) - (var(--size-checkbox-leeway)/2));
+            background-position: 0;
+        }
+
+        .theme-checkbox:checked {
+            /*Affect whole slider*/
+            background-position: 100%;
+        }
     </style>
 </head>
 
@@ -100,11 +163,11 @@
         <h1>MK - Overview</h1>
     </header>
     <nav>
-        <button onclick="toggleTheme()">Toggle Dark Mode</button>
         <a href="#qualifications">Qualifications</a>
         <a href="#skills">Skills</a>
         <a href="#hobbies">Hobbies</a>
         <a href="#contact">Contact</a>
+        <input type="checkbox" class="theme-checkbox" onchange="toggleTheme()">
     </nav>
 
     <main>
