@@ -14,7 +14,7 @@ html {
     --text-color: #c7c7c7;
     --link-color: #825daf;
 }
-@media (max-width: 400px) {
+@media (max-width: 430px) {
     html {
         scroll-padding-top: 0;
     }
