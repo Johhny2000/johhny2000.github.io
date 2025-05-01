@@ -14,6 +14,51 @@ html {
     --text-color: #c7c7c7;
     --link-color: #825daf;
 }
+@media (max-width: 400px) {
+    html {
+        scroll-padding-top: 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .nav-links a {
+        font-size: 0.6rem;
+        padding: 0 5px;
+    }
+
+    .nav-actions {
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 0 5vw !important;
+    }
+
+    section {
+        font-size: 0.8rem !important;
+    }
+
+    p, ul {
+        font-size: 0.7rem !important;
+    }
+
+    footer {
+        padding: 0.5rem !important
+    }
+}
 
 body {
     background-color: var(--background-color);
@@ -42,15 +87,30 @@ nav {
     top: 0;
     position: sticky;
     overflow: hidden;
-    padding: 0.5vw 0 0.5vw 0;
+    padding: 0.5vw 0;
     line-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-nav a {
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
     color: var(--text-color);
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
     text-decoration: none;
     display: inline;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    right: 0px !important;
 }
 
 main {
@@ -79,11 +139,10 @@ footer {
     --color-start: #ffffff;
     --color-end: #121212;
     --time-transmission: 0.5s;
-    --size-checkbox-circle: 15px;
-    --size-checkbox-leeway: 5px;
+    --size-checkbox-circle: 3vw;
+    --size-checkbox-leeway: 1vw;
     /*Position*/
-    position: absolute;
-    right: 30px;
+    position: relative;
     /*Remove regular checkbox*/
     -webkit-appearance: none;
     -moz-appearance: none;
